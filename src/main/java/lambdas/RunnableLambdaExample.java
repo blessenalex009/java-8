@@ -14,5 +14,12 @@ public class RunnableLambdaExample {
 //        after java-8
         Runnable runnableLambda = () -> System.out.println("Inside Runnable 1");
         new Thread(runnableLambda).start();
+
+        Runnable runnableLambdaMultiStatements = () -> {
+            System.out.println("Inside Runnable 2");
+            System.out.println("Inside Runnable 2");
+        };
+        new Thread(runnableLambdaMultiStatements).start();
+
     }
 }
