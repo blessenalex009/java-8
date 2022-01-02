@@ -8,8 +8,19 @@ public class Student {
     private int gradeLevel;
     private double gpa;
     private String gender;
-//    private int noteBooks;
+    List<String> activities = new ArrayList<>();
+
+    private int noteBooks;
 //    private Optional<Bike> bike;
+
+    public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities, int noteBooks) {
+        this.name = name;
+        this.gradeLevel = gradeLevel;
+        this.gpa = gpa;
+        this.gender = gender;
+        this.activities = activities;
+        this.noteBooks = noteBooks;
+    }
 
 /*    public Optional<Bike> getBike() {
         return bike;
@@ -28,18 +39,19 @@ public class Student {
         this.gradeLevel = gradeLevel;
         this.gpa = gpa;
         this.gender = gender;
+
 //        this.noteBooks = noteBooks;
         this.activities = activities;
     }
 
-//    public int getNoteBooks() {
-//
-//        return noteBooks;
-//    }
+    public int getNoteBooks() {
 
-//    public void setNoteBooks(int noteBooks) {
-//        this.noteBooks = noteBooks;
-//    }
+        return noteBooks;
+    }
+
+    public void setNoteBooks(int noteBooks) {
+        this.noteBooks = noteBooks;
+    }
 
     public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities) {
         this.name = name;
@@ -85,7 +97,6 @@ public class Student {
         this.gpa = gpa;
     }
 
-    List<String> activities = new ArrayList<>();
 
     public  List<String> getActivities() {
         return this.activities;
